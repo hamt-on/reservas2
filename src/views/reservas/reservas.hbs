@@ -6,7 +6,7 @@
       {{#if empleado}}
       <div class="py-5 text-center">
         <h2>Bienvenido {{user.fullname}}</h2>
-        <p class="lead">Aqui se encuentran las personas que han reservado una hora con usted.</p>
+        <p class="lead">Aquí se encuentran las personas que han realizado una reserva con usted.</p>
       </div>
       <div class="row g-5">
         <div class="col-md-5 col-lg-4 order-md-last">
@@ -41,7 +41,7 @@
           <table id="example" class="table table-hover">
             <thead class="text-muted">
               <tr>
-                <th>Paciente</th>
+                <th>Cliente</th>
                 <th>Fecha</th>
                 <th>Horario</th>
                 <th>Acción</th>
@@ -75,7 +75,7 @@
         {{else}}
       <div class="py-5 text-center">
         <h2>Bienvenido {{user.fullname}}</h2>
-        <p class="lead">Para realizar una reserva. Debe seleccionar el especialista por el cual desea ser atendido</p>
+        <p class="lead">Para realizar una reserva, seleccione el servicio y profesional que desea.</p>
       </div>
       <div class="row g-5">
         <div class="col-md-5 col-lg-4 order-md-last">
@@ -114,7 +114,7 @@
           </ul>
         </div>        
         <div class="col-md-7 col-lg-8">
-          <h4 class="mb-3">Buscar hora</h4>
+          <h4 class="mb-3">Buscar disponibilidad</h4>
 
           <form action="" method="POST" class="needs-validation" novalidate>
             <div class="row g-3">
@@ -127,7 +127,7 @@
                 {{/each}}
                 </select>
                 <div class="invalid-feedback">
-                  Elija un servicio valido.
+                  Elija un servicio válido.
                 </div>
               </div>
               <div class="col-12">
@@ -146,11 +146,11 @@
 
           {{#if horas}}
           <hr class="my-4">
-          <h4 class="mb-3">Horas Disponibles</h4>
+          <h4 class="mb-3">Horarios Disponibles</h4>
           <table id="example" class="table table-hover">
             <thead class="text-muted">
               <tr>
-                <th>Especialista</th>
+                <th>Profesional</th>
                 <th>Fecha</th>
                 <th>Horario</th>
                 <th>Acción</th>
@@ -184,7 +184,7 @@
       {{else}}
       <div class="py-5 text-center">
         <h2>Datos de usuario</h2>
-        <p class="lead">Completa los datos a continuacion, de esta manera podremos contactarnos con usted.</p>
+        <p class="lead">Complete los datos a continuación para poder contactarle sobre sus reservas.</p>
       </div>
       <div class="row">
         <div class="col-12">
@@ -221,9 +221,9 @@
                 </div>
               </div>
               <div class="col-4">
-                <label for="rut" class="form-label">RUT</label>
+                <label for="rut" class="form-label">Identificación</label>
                 <div class="input-group has-validation">
-                  <input type="rut" class="form-control"  minlength="12" maxlength="12" name="rut" id="rut" placeholder="XX.XXX.XXX-X">
+                  <input type="text" class="form-control"  minlength="6" maxlength="20" name="rut" id="rut" placeholder="Documento de identidad">
                   <div class="invalid-feedback">
                     Dato obligatorio.
                   </div>
@@ -232,7 +232,7 @@
               <div class="col-4">
                 <label for="correo" class="form-label">Correo</label>
                 <div class="input-group has-validation">
-                  <input type="correo" class="form-control"  name="correo" id="correo" placeholder="tu@correo.com">
+                  <input type="email" class="form-control"  name="correo" id="correo" placeholder="tu@correo.com">
                   <div class="invalid-feedback">
                     Dato obligatorio.
                   </div>
@@ -242,20 +242,20 @@
               <div class="col-4">
                 <label for="telefono" class="form-label">Teléfono</label>
                 <div class="input-group has-validation">
-                <input type="text" class="form-control"  name="telefono" id="telefono" placeholder="+56123456789" minlength="9" maxlength="12" required>
+                <input type="text" class="form-control"  name="telefono" id="telefono" placeholder="+56123456789" minlength="9" maxlength="15" required>
 
                   <div class="invalid-feedback">
                     Dato obligatorio.
                   </div>
                 </div>
               </div>
-              <div class="col-4">
-                <label for="prevision" class="form-label">Prevision</label>
+              <div class="col-12">
+                <label for="prevision" class="form-label">Observaciones</label>
                 <div class="input-group has-validation">
-                <input type="text" class="form-control"  name="prevision" id="previsionn" placeholder="Previsio o Isapre" minlength="9" maxlength="128" required>
+                <textarea class="form-control" name="prevision" id="previsionn" placeholder="Información adicional o notas sobre sus reservas" rows="3"></textarea>
 
                   <div class="invalid-feedback">
-                    Dato obligatorio.
+                    Dato opcional.
                   </div>
                 </div>
               </div>                            

@@ -3,7 +3,7 @@
       <main>
     <div class="py-5 text-center">
       <h2>Bienvenido {{user.fullname}}</h2>
-      <p class="lead">Para realizar una reserva. Debe seleccionar el especialista por el cual desea ser atendido</p>
+      <p class="lead">Para realizar una reserva, seleccione el servicio y profesional que desea.</p>
     </div>
     <div class="row g-5">
       <div class="col-md-5 col-lg-4 order-md-last">
@@ -42,7 +42,7 @@
         </ul>
       </div>
       <div class="col-md-7 col-lg-8">
-        <h4 class="mb-3">Buscar hora</h4>
+        <h4 class="mb-3">Buscar disponibilidad</h4>
         
         <form action="/buscarReserva" method="POST" class="needs-validation" novalidate>
           <div class="row g-3">
@@ -55,7 +55,7 @@
                 {{/each}}
               </select>
               <div class="invalid-feedback">
-                Elija un servicio valido.
+                Elija un servicio válido.
               </div>
             </div>
             <div class="col-12">
@@ -73,11 +73,11 @@
 
         {{#if horas}}
               <hr class="my-4">
-              <h4 class="mb-3">Horas Disponibles</h4>
+              <h4 class="mb-3">Horarios Disponibles</h4>
                 <table id="example" class="table table-hover">
                 <thead class="text-muted">
                   <tr>
-                    <th>Especialista</th>
+                    <th>Profesional</th>
                     <th>Fecha</th>
                     <th>Horario</th>
                     <th>Acción</th>

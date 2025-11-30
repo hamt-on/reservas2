@@ -39,10 +39,10 @@ app.set("view engine", ".hbs");
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(cookieParser("reservasmedicasinacap"));
+app.use(cookieParser("reservassistema"));
 app.use(
   session({
-    secret: "reservasmedicasinacap",
+    secret: "reservassistema",
     resave: false,
     saveUninitialized: false,
     store: new MySQLStore({}, pool),

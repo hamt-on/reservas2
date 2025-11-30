@@ -1,7 +1,7 @@
 {
   "name": "Reservas",
-  "version": "1.0.2",
-  "description": "RservasMedicas",
+  "version": "1.1.0",
+  "description": "Sistema universal de gestión de reservas multipropósito",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
